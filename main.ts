@@ -1,5 +1,5 @@
-input.calibrateCompass()
-input.isGesture(Gesture.Shake), function () {
+// input.calibrateCompass()
+input.onButtonPressed(Button.A, function () {
     basic.showString("" + (input.compassHeading()))
     if (input.compassHeading() > 337.6 && input.compassHeading() < 360) {
         basic.showArrow(ArrowNames.North)
@@ -11,7 +11,7 @@ input.isGesture(Gesture.Shake), function () {
         basic.showArrow(ArrowNames.East)
     } else if (input.compassHeading() >= 112.6 && input.compassHeading() <= 157.5) {
         basic.showArrow(ArrowNames.SouthEast)
-    } else if (input.compassHeading() >= 175.6 && input.compassHeading() <= 202.5) {
+    } else if (input.compassHeading() >= 157.6 && input.compassHeading() <= 202.5) {
         basic.showArrow(ArrowNames.South)
     } else if (input.compassHeading() >= 202.6 && input.compassHeading() <= 247.5) {
         basic.showArrow(ArrowNames.SouthWest)
@@ -20,4 +20,4 @@ input.isGesture(Gesture.Shake), function () {
     } else if (input.compassHeading() >= 292.6 && input.compassHeading() <= 337.5) {
         basic.showArrow(ArrowNames.NorthWest)
     }
-}
+})
